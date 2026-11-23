@@ -1,0 +1,28 @@
+# DRAFT, EXPERIMENTAL, NOT FIELD-TESTED. CHiQ AI PONT SA (ro.product.model AI PONT SA,
+# manufacturer Changhong, device ahua), Google TV 11 (API 30), firmware RTK3.240516.048,
+# fingerprint CHiQ/GTV_98CH/ahua:11/RTK3.240516.048/12350861:user/release-keys.
+# Prepared from the owner's Clean Your TV report captured 2026-10-26. This is an exact
+# candidate profile, not an upstream-tested CHiQ list. Only packages present in that report
+# are named below. Do not use this profile on another CHiQ board or firmware.
+#
+# Home: com.google.android.apps.tv.launcherx/.home.HomeActivity (Google TV Launcher X).
+# Setup Wraith and Realtek FallbackHome both claim HOME. This profile deliberately leaves
+# both enabled and never attempts the normal HOME takeover. The separate Home Button Helper
+# is an opt-in test-build experiment with a TV-side watchdog and rollback.
+#
+# PROTECTED: the Google TV launcher, Setup Wraith, Realtek key interception/global-key services,
+# Realtek DTV/ATV/ISDB/DTMB/ATSC/HDMI passthrough, Realtek power/setup/factory/input/keyboard,
+# Android TV settings and tuner provider, Google TV remote and casting, Bluetooth, OTA updater,
+# SystemUI, Play services and package/permission controllers. See candidate-meta.json.
+#
+# Apply only after reviewing each row in the app. Everything is DISABLED, not uninstalled.
+# Restore through Clean Your TV's restore point before trying another change.
+
+# Google feedback telemetry
+com.google.android.feedback
+
+# Optional Google TV features: ask first; no automatic disabling
+com.google.android.apps.tv.dreamx         # Ambient/screensaver experience
+com.google.android.syncadapters.calendar # Calendar sync
+com.google.android.youtube.tvmusic       # YouTube Music
+com.google.android.play.games            # Google Play Games
